@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_putstrlst.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rcepre <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/09 08:13:09 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 08:13:13 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 16:22:36 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,7 +20,8 @@ void	ft_putstrlst(t_list *lst, char c)
 	while (lst)
 	{
 		ft_putstr((char *)lst->content);
-		ft_putchar(c);
+		if (lst->next != NULL)
+			ft_putchar(c);
 		lst = lst->next;
 	}
 }
