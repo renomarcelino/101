@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstdel.c                                      .::    .:/ .      .::   */
+/*   ft_freedbtab.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/05 08:56:59 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 10:28:40 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/10 10:09:22 by rcepre       #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/10 10:29:46 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+void	ft_freedbtab(void **tab)
 {
-	if (*alst != NULL && del != NULL)
-	{
-		ft_lstdel(&((*alst)->next), del);
-		ft_lstdelone(alst, del);
-	}
+	int i;
+
+	i = 0;
+	while (tab[i])
+		free(tab[i++]);
+	free(tab);
 }

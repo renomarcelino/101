@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_dbstr_to_strlst.c                             .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rcepre <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/09 08:15:10 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 08:15:11 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 10:05:58 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,12 +22,12 @@ t_list		*ft_dbstr_to_strlst(char **dbstr)
 	if (!dbstr)
 		return (NULL);
 	i = 0;
-	if (!(lst = ft_lstnew(dbstr[i], sizeof(char*))))
+	if (!(lst = ft_lstnew(dbstr[i], sizeof(char) * ft_strlen(dbstr[i]))))
 		return (NULL);
 	begin_list = lst;
-	while (dbstr[i++] != NULL)
+	while (dbstr[++i])
 	{
-		if (!(lst->next = ft_lstnew(dbstr[i], sizeof(char*))))
+		if (!(lst->next = ft_lstnew(dbstr[i], ft_strlen(dbstr[i]))))
 			return (NULL);
 		lst = lst->next;
 	}

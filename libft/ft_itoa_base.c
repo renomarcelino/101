@@ -1,23 +1,38 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_lstdel.c                                      .::    .:/ .      .::   */
+/*   ft_itoa_base.c                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/10/05 08:56:59 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 10:28:40 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Created: 2018/10/10 08:41:06 by rcepre       #+#   ##    ##    #+#       */
+/*   Updated: 2018/10/10 10:06:11 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+char		*ft_itoa_base(int nb, int base)
 {
-	if (*alst != NULL && del != NULL)
+	int		i;
+	char	*str;
+	int		tmp;
+
+	i = 0;
+	tmp = nb;
+	while (tmp > base)
 	{
-		ft_lstdel(&((*alst)->next), del);
-		ft_lstdelone(alst, del);
+		tmp /= base;
+		i++;
 	}
+	if (!(str = ft_strnew(i)))
+		return (NULL);
+	while (i > 0)
+	{
+		tmp = nb % base;
+		str[i--] = tmp + '0';
+		nb /= base;
+	}
+	return (str);
 }
