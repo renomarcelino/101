@@ -6,7 +6,7 @@
 /*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/04 10:05:48 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 15:38:30 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 18:14:10 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -50,7 +50,10 @@ char			**ft_strsplit(char const *s, char c)
 	i = -1;
 	while (++i < nb_words)
 		if (!(tab[i] = get_word(s, c, i + 1)))
+		{
+			ft_freedbtab((void**)tab);
 			return (NULL);
+		}
 	tab[i] = 0;
 	return (tab);
 }
