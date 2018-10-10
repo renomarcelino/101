@@ -6,7 +6,7 @@
 /*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/09 11:36:29 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 10:07:28 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 16:14:57 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,9 +21,8 @@ char	**ft_strlst_to_dbstr(t_list *lst)
 	i = 0;
 	if (!lst)
 		return (NULL);
-	if (!(dbstr = (char**)ft_memalloc(sizeof(char*) * ft_lstcount(lst) + 1)))
+	if (!(dbstr = (char**)ft_memalloc(sizeof(char*) * (ft_lstcount(lst) + 1))))
 		return (NULL);
-	dbstr[ft_lstcount(lst) + 1] = NULL;
 	while (lst)
 	{
 		if (!(dbstr[i] = ft_strnew(lst->content_size)))
@@ -32,5 +31,6 @@ char	**ft_strlst_to_dbstr(t_list *lst)
 		i++;
 		lst = lst->next;
 	}
+	dbstr[i] = NULL;
 	return (dbstr);
 }

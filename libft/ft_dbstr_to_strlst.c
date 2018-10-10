@@ -6,7 +6,7 @@
 /*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/09 08:15:10 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 10:05:58 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 16:03:35 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -31,5 +31,6 @@ t_list		*ft_dbstr_to_strlst(char **dbstr)
 			return (NULL);
 		lst = lst->next;
 	}
+	lst->next = NULL;
 	return (begin_list);
 }

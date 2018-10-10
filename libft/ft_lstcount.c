@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_lstcount.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rcepre <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/09 08:17:49 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 08:17:50 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 16:15:05 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,10 +20,10 @@ size_t		ft_lstcount(t_list *lst)
 	if (!lst)
 		return (0);
 	i = 0;
-	while (lst->next != NULL)
+	while (lst)
 	{
-		lst = lst->next;
 		i++;
+		lst = lst->next;
 	}
 	return (i);
 }

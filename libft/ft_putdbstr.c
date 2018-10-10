@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_putdbstr.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: rcepre <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
+/*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/09 08:16:03 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/09 08:16:04 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 16:09:25 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,7 +23,8 @@ void	ft_putdbstr(char **dbstr, char c)
 	while (dbstr[i] != NULL)
 	{
 		ft_putstr(dbstr[i]);
-		ft_putchar(c);
+		if (!(dbstr[i + 1] == '\0'))
+			ft_putchar(c);
 		i++;
 	}
 }
