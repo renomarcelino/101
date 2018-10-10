@@ -6,7 +6,7 @@
 #    By: rcepre <rcepre@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/16 09:13:44 by rcepre            #+#    #+#              #
-#    Updated: 2018/10/10 10:12:57 by rcepre           ###   ########.fr        #
+#    Updated: 2018/10/10 11:11:14 by rcepre           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 # **************************************************************************** #
@@ -89,7 +89,6 @@ SRC = 	ft_atoi.c\
 		ft_sorttab.c\
 		ft_puttab.c\
 		ft_iswhitespace.c\
-		ft_itoa_base.c\
 		ft_freedbtab.c\
 
 all: $(NAME)

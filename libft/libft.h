@@ -6,7 +6,7 @@
 /*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/02 16:36:53 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 10:13:48 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 11:11:07 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -95,7 +95,7 @@ char				*ft_strndup(const char *s, size_t n);
 char				*ft_strlowcase(char *str);
 int					ft_iswhitespace(int c);
 char				*ft_strupcase(char *str);
-int					ft_strcountwords(char const *s, char c);
+int					ft_strcountwords(const char *s, char c);
 int					ft_islower(int c);
 int					ft_isupper(int c);
 void				ft_putstrlst(t_list *lst, char c);
@@ -105,7 +105,6 @@ size_t				ft_lstcount(t_list *lst);
 t_list				*ft_dbstr_to_strlst(char **dbstr);
 char				**ft_strlst_to_dbstr(t_list *lst);
 int					*ft_sorttab(int *tab, int size);
-char				*ft_itoa_base(int nb, int base);
 void				ft_freedbtab(void **tab);
 
 #endif

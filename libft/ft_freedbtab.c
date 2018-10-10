@@ -6,7 +6,7 @@
 /*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/10 10:09:22 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/10 10:29:46 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/10 10:52:22 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,8 @@ void	ft_freedbtab(void **tab)
 {
 	int i;
 
+	if (!tab)
+		return ;
 	i = 0;
 	while (tab[i])
 		free(tab[i++]);
