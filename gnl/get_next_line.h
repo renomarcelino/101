@@ -6,7 +6,7 @@
 /*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/10 06:14:34 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 10:32:18 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 22:35:56 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,6 +22,7 @@ typedef struct 			s_gnl
 {
 	char				**s_tab;
 	int					*fd_tab;
+	int					def;
 }						t_gnl;
 
 int			get_next_line(const int fd, char **line);

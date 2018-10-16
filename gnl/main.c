@@ -6,7 +6,7 @@
 /*   By: rcepre <rcepre@student.42.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/15 18:58:49 by rcepre       #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/16 15:15:04 by rcepre      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/10/16 22:37:18 by rcepre      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,16 +23,24 @@ int					main(int ac, char **av)
 
 		fd = open(av[1], O_RDONLY);
 		fd2 = open(av[2], O_RDONLY);
-		if (fd == -1 || fd2 == -1)
-			return (1);
+		//if (fd == -1 || fd2 == -1)
+	//		return (1);
 		ac = 0;
 
-	ft_putnbr(get_next_line(fd, &line));
-	ft_putendl(line);
-	// ft_putnbr(get_next_line(fd2, &line));
-	// ft_putendl(line);
-	// ft_putnbr(get_next_line(fd, &line));
-	// ft_putendl(line);
+	printf("return %d\n", get_next_line(fd, &line));
+	printf("line : %s\n\n", line);
+	printf("return %d\n", get_next_line(fd, &line));
+ 	printf("line : %s\n\n", line);
+	printf("return %d\n", get_next_line(fd, &line));
+	printf("line : %s\n\n", line);
+	printf("return %d\n", get_next_line(fd, &line));
+	printf("line : %s\n\n", line);
+	// printf("return %d\n", get_next_line(fd, &line));
+	// printf("line : %s\n\n", line);
+	// printf("return %d\n", get_next_line(fd, &line));
+	// printf("line : %s\n\n", line);
+	// printf("return %d\n", get_next_line(fd2, &line));
+	// printf("line : %s\n", line);
 	// ft_putnbr(get_next_line(fd2, &line));
 	// ft_putendl(line);
 	// ft_putnbr(get_next_line(fd2, &line));
